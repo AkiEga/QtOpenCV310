@@ -18,3 +18,8 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+win32:DEPENDPATH  += "C:\tools\opencv\build\include"
+win32:INCLUDEPATH += "C:\tools\opencv\build\include"
+win32:LIBS +=      -L"C:\tools\opencv\build\x64\vc14\lib"
+win32:LIBS += -lopencv_world310d
