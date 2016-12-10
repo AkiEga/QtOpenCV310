@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "opencv2/world.hpp"
 
 namespace Ui {
     class MainWindow;
@@ -17,6 +18,7 @@ class MainWindow : public QMainWindow
 
     private:
         Ui::MainWindow *ui;
+        cv::Mat *src;
 };
 
 #endif // MAINWINDOW_H
