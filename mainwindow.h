@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "opencv2/world.hpp"
+#include "opencv2/opencv.hpp"
+#include <QPainter>
 
 namespace Ui {
     class MainWindow;
@@ -16,9 +18,14 @@ class MainWindow : public QMainWindow
         explicit MainWindow(QWidget *parent = 0);
         ~MainWindow();
 
+        void MainWindow::paintEvent(QPaintEvent *event);
+        void MainWindow::cvmat2qimg(const cv::Mat *src, QImage *dst);
     private:
         Ui::MainWindow *ui;
-        cv::Mat *src;
+        cv::VideoCapture cam;
+        QPainter painter;
+
+
 };
 
 #endif // MAINWINDOW_H
