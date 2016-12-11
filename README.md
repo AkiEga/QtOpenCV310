@@ -1,4 +1,5 @@
-# QtOpenCV310
+# 説明
+QtMainwindow 上でOpenCVが叩けるプログラム。
 
 # 開発環境
 - OS: Windows 10 64bit
